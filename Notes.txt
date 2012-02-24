@@ -1,0 +1,91 @@
+﻿Working on installing and command line version of the program, need to find the file name that the program is using and then copy it
+
+for gif http://www.vcskicks.com/csharp_animated_gif2.php
+
+
+automatic update progcess code
+
+ public bool Update_Process(string passed_CVersion)
+        {
+            ThreadStart job = new ThreadStart(find_new_version);
+            Thread thread = new Thread(job);
+            thread.Start();
+            string[] AVersion = internal_aVersion.Split('.'); //[0] is major, [1] is minor
+            string[] CVersion = passed_CVersion.Split('.');
+
+            if (AVersion.Length == 2 && CVersion.Length == 2)
+            {
+                if (Convert.ToInt32(AVersion[0]) >= Convert.ToInt32(CVersion[0]) && Convert.ToInt32(AVersion[1]) >= Convert.ToInt32(CVersion[1]))
+                {
+                    if (internal_aVersion != null && internal_console == false) // graphics version
+                    {
+                        SaveFileDialog savy = new SaveFileDialog();
+                        savy.Filter = "Executables *.exe|*.exe";
+                        savy.DefaultExt = ".exe";
+                        savy.AddExtension = true;
+                        savy.OverwritePrompt = true;
+                        savy.FileName = "6to4 Card Cleaner";
+                        if (DialogResult.OK == savy.ShowDialog())
+                            interal_save_Location = savy.FileName;
+                        //else location isnt changed
+                    }
+                    /*else
+                    {
+                        if (internal_aVersion != null && internal_console == true) // console version
+                        { // use internak_save_location
+
+                        }
+                    }*/
+                    if (interal_save_Location != "") // If you are console we saved it, if your not we just asked, it should be saved
+                    {
+                        WebClient Client = new WebClient();
+                        string debug_temp_build = internal_web_server + AVersion_dynamic.Text + "/6to4 Card Cleaner.exe";
+                        Client.DownloadFile(debug_temp_build, interal_save_Location); // we are admin so where ever
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            return false;
+
+
+			Bottom line this is a 6to4 adapter and IPv6 issue.
+
+1. Turn off wireless and connect via network cable.									x
+
+2. Disable IPv6 in Windows 7 http://support.microsoft.com/kb/929852					X
+
+To disable certain IPv6 components yourself, follow these steps:
+Run Regedit
+In Registry Editor, locate and then click the following registry subkey:
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\
+Double-click DisabledComponents to modify the DisabledComponents entry.
+
+Note If the DisabledComponents entry is unavailable, you must create it.
+To do this, follow these steps:
+In the Edit menu, point to New, and then click DWORD (32-bit) Value.
+Type DisabledComponents, and then press ENTER.
+Double-click DisabledComponents.
+Type any one of the following values to configure the IPv6 protocol, and
+then click OK:
+Type 0xffffffff to disable all IPv6 components, except the IPv6 loopback
+interface. This value also configures Windows Vista to use Internet
+Protocol version 4 (IPv4) instead of IPv6 in prefix policies.
+
+3. Remove all the 6to4 adapters in Device Manager found under Network
+Adapters.  This can be done manually (but can be quite time consuming)
+or you can use the devcon utility found here
+http://support.microsoft.com/?kbid=311272
+Devcon remove *6TO4MP*
+
+4. Apply the following hotfix to prevent Windows 7 from generating
+multiple 6TO4 adapters.  http://support.microsoft.com/kb/980486/
+
+5. Reboot, turn wireless back on and test your connections.
+
+The following thread was instrumental in resolving this problem,
+http://social.answers.microsoft.com/Forums/en-US/w7network/thread/07c467
+85-cd1b-42c9-aa94-0adf1f4e2516
+Note that the checked answer by Jeffery Hicks wasn't the solution, read
+further down the thread for resolution, specifically April 23, 2010,
