@@ -11,3 +11,15 @@ C:\Users\Dan\Documents\My Dropbox\Virtual Card Finder\6to4 Card Cleaner\obj\Rele
 C:\Users\Dan\Documents\My Dropbox\Virtual Card Finder\6to4 Card Cleaner\obj\Release\ResGen.write.1.tlog
 C:\Users\Dan\Documents\My Dropbox\Virtual Card Finder\6to4 Card Cleaner\obj\Release\6to4 Card Cleaner.exe
 C:\Users\Dan\Documents\My Dropbox\Virtual Card Finder\6to4 Card Cleaner\obj\Release\6to4 Card Cleaner.pdb
+C:\Users\Dan\Project\6to4\obj\Release\6to4 Card Cleaner.exe
+C:\Users\Dan\Project\6to4\obj\Release\6to4 Card Cleaner.pdb
+C:\Users\Dan\Project\6to4\bin\Release\6to4 Card Cleaner.exe
+C:\Users\Dan\Project\6to4\bin\Release\6to4 Card Cleaner.pdb
+C:\Users\Dan\Project\6to4\obj\Release\6to4 Card Cleaner.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Project\6to4\obj\Release\_6to4_Card_Cleaner.AboutBox_Form.resources
+C:\Users\Dan\Project\6to4\obj\Release\_6to4_Card_Cleaner.MainApp.resources
+C:\Users\Dan\Project\6to4\obj\Release\_6to4_Card_Cleaner.Properties.Resources.resources
+C:\Users\Dan\Project\6to4\obj\Release\_6to4_Card_Cleaner.Visual_Form.resources
+C:\Users\Dan\Project\6to4\obj\Release\_6to4_Card_Cleaner.SetIPv6_Form.resources
+C:\Users\Dan\Project\6to4\obj\Release\_6to4_Card_Cleaner.Update_Form.resources
+C:\Users\Dan\Project\6to4\obj\Release\6to4 Card Cleaner.csproj.GenerateResource.Cache

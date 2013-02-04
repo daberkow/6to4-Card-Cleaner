@@ -19,7 +19,7 @@ namespace _6to4_Card_Cleaner
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             bool debug_mode = false;
-            string Real_Version = "1.63";
+            string Real_Version = "1.64";
 
             //make sure we arent already running
             Process[] ProcessesScan = Process.GetProcessesByName("devcon");

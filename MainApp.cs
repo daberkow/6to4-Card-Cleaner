@@ -843,7 +843,7 @@ namespace _6to4_Card_Cleaner
         }
         private void Update_Button_Click_wrapper()
         {
-            Update_Form update_box = new Update_Form(internal_version, "http://programs.buildingtents.com/6to4CardCleaner/", "http://programs2.buildingtents.com/6to4CardCleaner/", "6to4 Card Cleaner.exe");
+            Update_Form update_box = new Update_Form(internal_version, "https://raw.github.com/daberkow/6to4-Card-Cleaner/master/updates/", "http://programs2.buildingtents.com/6to4CardCleaner/", "6to4 Card Cleaner.exe");
             update_box.StartPosition = FormStartPosition.CenterScreen;
             update_box.ShowDialog();
             update_box = null;
